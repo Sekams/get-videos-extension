@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 468px;
+            height: 352px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Muli', sans-serif;
+            font-size: 14px;
+            overflow: hidden;
+            box-shadow: 0px 0px 6px 0px #0000005e;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .container {
+            padding: 1em;
+            height: 86%;
+            width: 100%;
+            overflow-y: scroll;
+        }
+
+        footer {
+            padding: 0.5em 1em;
+            background-color: #016f88;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 2.5em;
+        }
+
+        .footer-link {
+            float: right;
+        }
+
+        a,
+        a:visited,
+        a:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .submit-btn {
+            display: inline-block;
+            font-family: inherit;
+            font-size: 1.2rem;
+            padding: .5rem 1rem;
+            margin: 1rem auto;
+            border-radius: .5rem;
+            cursor: pointer;
+            color: #FFFFFF;
+            background: #64DD17;
+        }
+
+        a.footer-link,
+        a.footer-link:hover,
+        a.footer-link:active {
+            color: #FFFFFF;
+        }
+
+        .download-icon {
+            display: inline-block;
+            width: 1rem;
+            height: auto;
+            margin: 0 .5rem;
+        }
+
+        video {
+            width: 20rem;
+            height: auto;
+        }
+
+        .video-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .toast-message {
+            position: fixed;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            width: 400px;
+            font-size: 16px;
+            transition: all .5s;
+            z-index: 9999;
+            box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 424px) {
+            .toast-message {
+                width: calc(100% - 20px);
+            }
+        }
+
+        .toast-message.success {
+            background: #64DD17;
+        }
+
+        .toast-message.danger {
+            background: #F44336;
+        }
+
+        .toast-message .message {
+            color: #fff;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        .toast-message .close {
+            position: absolute;
+            top: 28%;
+            right: 15px;
+            float: right;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1;
+            color: black;
+            text-shadow: white 0px 1px 0px;
+            opacity: 0.2;
+            cursor: pointer;
+        }
+
+        .toast-message .close::after {
+            content: "x";
+        }
+
+        .toast-message .close:hover {
+            opacity: 0.6;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script src="popup.js"></script>
+</head>
+
+<body>
+    <div class="toast-message">
+        <span class="close"></span>
+        <div class="message">
+            Notification
+        </div>
+    </div>
+    <div class="container">
+
+    </div>
+    <footer>
+        <img class="footer-logo" src="img/logo.png" alt="Logo">
+    </footer>
+</body>
+
+</html>
